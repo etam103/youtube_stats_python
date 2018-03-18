@@ -25,8 +25,7 @@ from config import HOST, PORT, DEBUG
 CLIENT_SECRETS_FILE = "client_secret.json"
 
 SCOPES = ['https://www.googleapis.com/auth/plus.login',
-          'https://www.googleapis.com/auth/youtube', 
-          'https://www.googleapis.com/auth/youtube.readonly']
+          'https://www.googleapis.com/auth/youtube']
 
 # set up path to static files
 app = flask.Flask(__name__, static_url_path='')
