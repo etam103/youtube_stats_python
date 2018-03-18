@@ -1,0 +1,18 @@
+.search {
+  position:absolute;
+  top:65%;
+  left:25%;
+  width:50%;
+}
+
+.searchBody {
+  position:absolute;
+  width:100%;
+  outline: #D3D3D3 solid 1px;
+}
+
+.searchResults {
+  height: 200px;
+  margin: 0;
+  overflow-y: scroll;
+}

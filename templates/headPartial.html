@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Bootstrap 4 lets try 3 -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="/styles/sticky-footer-navbar.css" type="text/css" rel="stylesheet">
+
+    {% if pageName == "loading" %}
+      <link type="text/css" rel="stylesheet" href="/styles/cup.css">
+    {% endif %}  
+
+    {% if pageName == "liveStream" %}
+      <link href="/styles/chat-messages.css" type="text/css" rel="stylesheet">
+      <link href="/styles/navbar.css" type="text/css" rel="stylesheet">
+      <link href="/styles/search.css" type="text/css" rel="stylesheet">
+      <link href="/styles/video-container.css" type="text/css" rel="stylesheet">
+    {% endif %}
+
+    <center>
+      <title>Youtube Stats</title>
+    </center>
+  </head>
+  <body>

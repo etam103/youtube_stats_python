@@ -1,0 +1,9 @@
+.video-container iframe,
+.video-container object, 
+.video-container embed {
+    position:absolute;
+    top:10%;
+    left:5%;
+    width:50%;
+    height:50%;
+}

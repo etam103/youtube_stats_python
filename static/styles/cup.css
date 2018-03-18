@@ -1,0 +1,52 @@
+body {
+	margin:0;
+	padding:0;
+  background: #262626;
+}
+.cup {
+  position: absolute;
+	top: 40%;
+  left: 48%;
+	transform: translateY(-50%,-50%);
+	width: 150px;
+	height: 180px;
+	border: 6px solid #262626;
+	border-top: 2px solid transparent;
+	border-radius: 15px;
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
+	background: url(http://xflow.pentair.com/~/media/websites/x-flow/misc/xflowvideoframe.png); 
+	background-repeat: repeat-x;
+	animation: animate 20s linear infinite;
+	box-shadow: 0 0 0 6px #fff;
+}
+.cup:before {
+	content: '';
+	position: absolute;
+  width: 50px;
+	height: 80px;
+	border: 6px solid #fff;
+	right: -57px;
+	top: 30px;
+	border-top-right-radius: 35px;
+	border-bottom-right-radius: 35px;
+}
+
+
+@keyframes animate {
+	0% {
+		background-position: 0 100px;
+	}
+	10% {
+		background-position: 0 100px;
+	}
+	40% {
+		background-position: 1000px -70px;
+	}
+	80% {
+		background-position: 2000px -80px;
+	}
+	100% {
+		background-position: 2500px 100px;
+	}
+}
