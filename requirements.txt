@@ -8,3 +8,4 @@ google-auth-httplib2
 setuptools
 gunicorn
 eventlet
+gevent
