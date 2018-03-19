@@ -59,21 +59,22 @@
     });
   }
 
-  socket.on('connect', () => {
-    socket.emit('startPolling', {
-      videoId : "{{videoId}}"
-    });
-  });
+  // socket.on('connect', () => {
+  //   socket.emit('startPolling', {
+  //     videoId : "{{videoId}}"
+  //   });
+  // });
 
   socket.on("heartbeat", function() {
     setTimeout(function() {
         socket.emit("heartbeat")
     },15000);
   });
-  socket.emit("heartbeat")
-  // socket.emit('startPolling', {
-  //     videoId : "{{videoId}}"
-  // });
+  socket.emit("heartbeat");
+
+  socket.emit('startPolling', {
+      videoId : "{{videoId}}"
+  });
 
   socket.on('new message', function(data) {
     console.log("new message");
