@@ -48,7 +48,8 @@ socketio = SocketIO(app)
 def make_session_permanent():
   flask.session.permanent = True
   app.permanent_session_lifetime = timedelta(hours=12)
-
+  
+  request = flask.request
   if request.headers.get('X-Forwarded-Proto') == 'http':
     url = request.url.replace('http://', 'https://', 1)
     code = 301
