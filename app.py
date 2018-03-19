@@ -30,7 +30,7 @@ SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl']
 
 # set up path to static files
 # app = flask.Flask(__name__, static_url_path='')
-app = flask.Flask(__name__)
+app = flask.Flask(__name__, static_url_path='')
 app.secret_key = '\x03\xc3\x93\x85\xf1F\xdbA\xff\x0b\xc0>:\xff\xa4\x19\x0c\xd6 \xa2G\x1eza'
 
 # Setup Socket IP
