@@ -24,8 +24,9 @@ from config import HOST, PORT, DEBUG
 # client_secret.
 CLIENT_SECRETS_FILE = "client_secret.json"
 
-SCOPES = ['https://www.googleapis.com/auth/plus.login',
-          'https://www.googleapis.com/auth/youtube']
+# This OAuth 2.0 access scope allows for full read/write access to the
+# authenticated user's account and requires requests to use an SSL connection.
+SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl']
 
 # set up path to static files
 app = flask.Flask(__name__, static_url_path='')
@@ -216,5 +217,5 @@ def startPollingEvent(data):
 if __name__ == '__main__':
   # When running locally, disable OAuthlib's HTTPs verification. When
   # running in production *do not* leave this option enabled.
-  # os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+  os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
   socketio.run(app, host=HOST, port=PORT, debug=DEBUG)
