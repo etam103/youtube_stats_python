@@ -10,3 +10,5 @@ gunicorn
 eventlet
 gevent
 gevent-websocket
+uwsgi
+werkzeug
