@@ -1,9 +1,9 @@
-setuptools
-Flask_SocketIO==2.9.6
-google_auth_oauthlib==0.2.0
-Flask_PyMongo==0.5.1
-Flask==0.12.2
-protobuf==3.5.2.post1
-google_api_python_client==1.6.5
-google-auth-httplib2
-gunicorn==18.0
+# setuptools
+# Flask_SocketIO==2.9.6
+# google_auth_oauthlib==0.2.0
+# Flask_PyMongo==0.5.1
+# Flask==0.12.2
+# protobuf==3.5.2.post1
+# google_api_python_client==1.6.5
+# google-auth-httplib2
+# gunicorn==18.0
