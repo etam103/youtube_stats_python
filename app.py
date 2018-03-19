@@ -11,6 +11,7 @@ from flask import jsonify
 
 from flask_socketio import SocketIO, send, emit
 from flask_pymongo import PyMongo
+from flask_sslify import SSLify
 
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
@@ -31,6 +32,7 @@ SCOPES = ['https://www.googleapis.com/auth/plus.login', 'email', 'https://www.go
 
 # set up path to static files
 app = flask.Flask(__name__, static_url_path='')
+sslify = SSLify(app)
 app.secret_key = '\x03\xc3\x93\x85\xf1F\xdbA\xff\x0b\xc0>:\xff\xa4\x19\x0c\xd6 \xa2G\x1eza'
 
 # Setup Socket IP
@@ -226,5 +228,5 @@ def startPollingEvent(data):
 if __name__ == '__main__':
   # When running locally, disable OAuthlib's HTTPs verification. When
   # running in production *do not* leave this option enabled.
-  os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
-  socketio.run(app, host=HOST, port=PORT, debug=True)
+  # os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+  socketio.run(app, host=HOST, port=PORT, debug=False)
