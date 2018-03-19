@@ -34,7 +34,7 @@ app = flask.Flask(__name__, static_url_path='')
 app.secret_key = '\x03\xc3\x93\x85\xf1F\xdbA\xff\x0b\xc0>:\xff\xa4\x19\x0c\xd6 \xa2G\x1eza'
 
 # Setup Socket IP
-socketio = SocketIO(app, ping_timeout=100000)
+socketio = SocketIO(app, ping_timeout=100000, ping_interval=1000000)
 # socketio = SocketIO(app)
 
 # Setup mongodb
