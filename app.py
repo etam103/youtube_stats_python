@@ -177,7 +177,6 @@ def disconnect_user():
 
 def startPolling(liveChatId, nextPageToken, pollingIntervalMillis):
   time.sleep(pollingIntervalMillis)
-  # socketio.sleep(pollingIntervalMillis)
   
   # Load the credentials from the session.
   credentials = google.oauth2.credentials.Credentials(
@@ -204,7 +203,6 @@ def startPolling(liveChatId, nextPageToken, pollingIntervalMillis):
 
 @socketio.on('startPolling')
 def startPollingEvent(data):
-  print 'startPolling'
   videoId = data['videoId']
   
   credentials = google.oauth2.credentials.Credentials(
@@ -218,8 +216,8 @@ def startPollingEvent(data):
 
 @socketio.on('heartbeat')
 def heartbeat():
-  print "heart beat"
   socketio.emit("heartbeat")
+
 # put this back in if storage is needed
 # @socketio.on('search')
 # def searchEvent(data):
