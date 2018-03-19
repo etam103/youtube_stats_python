@@ -169,7 +169,8 @@ def disconnect_user():
     flask.session.clear()
 
 def startPolling(liveChatId, nextPageToken, pollingIntervalMillis):
-  time.sleep(pollingIntervalMillis)
+  # time.sleep(pollingIntervalMillis)
+  socketio.sleep(pollingIntervalMillis)
   
   # Load the credentials from the session.
   credentials = google.oauth2.credentials.Credentials(
