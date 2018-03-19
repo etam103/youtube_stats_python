@@ -9,3 +9,4 @@ setuptools
 gunicorn
 eventlet
 gevent
+gevent-websocket
