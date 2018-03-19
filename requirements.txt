@@ -7,4 +7,3 @@ google_api_python_client==1.6.5
 google-auth-httplib2
 gunicorn
 eventlet
-setuptools
