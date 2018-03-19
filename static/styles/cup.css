@@ -15,7 +15,7 @@ body {
 	border-radius: 15px;
 	border-top-left-radius: 5px;
 	border-top-right-radius:5px;
-	background: url(http://xflow.pentair.com/~/media/websites/x-flow/misc/xflowvideoframe.png); 
+	/* background: url(http://xflow.pentair.com/~/media/websites/x-flow/misc/xflowvideoframe.png);  */
 	background-repeat: repeat-x;
 	animation: animate 20s linear infinite;
 	box-shadow: 0 0 0 6px #fff;
