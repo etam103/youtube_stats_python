@@ -5,5 +5,5 @@ Flask==0.12.2
 protobuf==3.5.2.post1
 google_api_python_client==1.6.5
 google-auth-httplib2
-gunicorn
+gunicorn==18
 eventlet
