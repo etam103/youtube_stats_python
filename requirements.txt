@@ -6,7 +6,6 @@ protobuf==3.5.2.post1
 google_api_python_client==1.6.5
 google-auth-httplib2
 setuptools
-gunicorn==18.0
+gunicorn
 eventlet
 gevent
-flask_sslify
