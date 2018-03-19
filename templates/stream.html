@@ -59,9 +59,14 @@
     });
   }
 
-  socket.emit('startPolling', {
+  socket.on('connect', () => {
+    socket.emit('startPolling', {
       videoId : "{{videoId}}"
+    });
   });
+  // socket.emit('startPolling', {
+  //     videoId : "{{videoId}}"
+  // });
 
   socket.on('new message', function(data) {
     console.log("new message");
