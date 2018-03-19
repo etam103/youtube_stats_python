@@ -9,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
     <script>
       // const socket = io();
+      console.log(document.domain);
+      console.log(location.port);
       var socket = io.connect('https://' + document.domain + ':' + location.port);
     </script>
 
