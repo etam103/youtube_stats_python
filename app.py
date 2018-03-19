@@ -204,6 +204,7 @@ def startPolling(liveChatId, nextPageToken, pollingIntervalMillis):
 
 @socketio.on('startPolling')
 def startPollingEvent(data):
+  print 'startPolling'
   videoId = data['videoId']
   
   credentials = google.oauth2.credentials.Credentials(
