@@ -64,6 +64,13 @@
       videoId : "{{videoId}}"
     });
   });
+
+  socket.on("heartbeat", function() {
+    setTimeout(function() {
+        socket.emit("heartbeat")
+    },15000);
+  });
+  socket.emit("heartbeat")
   // socket.emit('startPolling', {
   //     videoId : "{{videoId}}"
   // });

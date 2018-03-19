@@ -217,6 +217,10 @@ def startPollingEvent(data):
   activeLiveChatId = response['items'][0]['liveStreamingDetails']['activeLiveChatId']
   startPolling(activeLiveChatId, '', 0)
 
+@socketio.on('heartbeat')
+def heartbeat():
+  print "heart beat"
+  socketio.emit("heartbeat")
 # put this back in if storage is needed
 # @socketio.on('search')
 # def searchEvent(data):
