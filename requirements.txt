@@ -9,4 +9,3 @@ setuptools
 gunicorn==18.0
 eventlet
 gevent
-geventwebsocket
